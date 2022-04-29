@@ -34,7 +34,7 @@
         <section>
             <h2>L'entreprise</h2>
             <h3>Une équipe a l'écoute et souriante.</h3>
-            <article class="story">
+            <article class="story" id="story_team">
                 <img src="assets/img/aaa.png" title="équipe de vente">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ducimus, nam repellat nostrum
                     sequi architecto, reiciendis quae cum ipsum magnam cumque nemo deserunt eum voluptas tempore
@@ -43,7 +43,7 @@
                     consequuntur voluptates commodi tenetur numquam cumque nesciunt in, veniam odio.</p>
             </article>
             <h3>Une fabrication made in France.</h3>
-            <article class="story">
+            <article class="story" id="story_made">
                 <img src="assets/img/Equipe_usine_manuelec.jpg" title="Equipe d'usine">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus repellendus doloremque nobis,
                     quibusdam voluptas consequuntur voluptatem magnam dolorum tenetur. Molestias eos numquam
@@ -55,39 +55,40 @@
         </section>
         <section>
             <h2>Nous contacter</h2>
-            <p class="question">Vous souhaitez nous faire un retour sur votre expérience ? Nous contacter pour un partenariat ou pour un
+            <p class="question">Vous souhaitez nous faire un retour sur votre expérience ? Nous contacter pour un
+                partenariat ou pour un
                 poste chez nous ? Vous êtes au bon endroit !</p>
-            <form id="contact" >
+            <form id="contact">
                 <fieldset id="form_part1">
                     <div>
                         <label for="mail">E-mail :</label>
-                        <input type="email" id="mail" name="user_mail">
+                        <input type="email" id="mail" name="user_mail" class="margform">
                     </div>
                     <div>
                         <label for="name">Nom :</label>
-                        <input type="text" id="name" name="user_name">
+                        <input type="text" id="name" name="user_name" class="margform">
                     </div>
                     <div>
                         <label for="firstname">Prénom :</label>
-                        <input type="text" id="firstname" name="first_name">
+                        <input type="text" id="firstname" name="first_name" class="margform">
                     </div>
                     <div>
                         <label for="loca">Adresse :</label>
-                        <input type="text" id="loca" name="location">
+                        <input type="text" id="loca" name="location" class="margform">
                     </div>
                     <div>
                         <label for="postal">Code postal :</label>
-                        <input type="text" id="postal" name="postal_location">
+                        <input type="text" id="postal" name="postal_location" class="margform">
                     </div>
                 </fieldset>
-                <fieldset id="form_part2" >
+                <fieldset id="form_part2">
                     <div>
                         <label for="object">Objet du message :</label>
                         <input type="text" id="object" name="object_msg">
                     </div>
                     <div>
                         <label for="msg">Votre message :</label>
-                        <textarea id="msg" name="user_message" rows="5" cols="25"></textarea>
+                        <textarea id="msg" name="user_message" rows="8" cols="35"></textarea>
                     </div>
                 </fieldset>
                 <input type="submit" value="Envoyer" form="contact" id="buttonform">
@@ -95,8 +96,9 @@
         </section>
         <section>
             <article>
-                <p class="question" id="tel" >Ou alors vous avez une question a propos d’un produit ou bien d’un magasin ?<br><br>Tel : 06 01 23 45 67
-                    <br>07 01 23 45 67 <br><br>Fax :0217211111
+                <p class="question" id="tel">Ou alors vous avez une question a propos d’un produit ou bien d’un magasin
+                    ?<br><br>Tel : 06 01 23 45 67
+                    <br>07 01 23 45 67 <br><br>Fax: 0217 211 111
                 </p>
             </article>
         </section>
@@ -113,12 +115,15 @@
         <div>
             <a href="https://www.facebook.com/"><img src="assets/img/facebook-iconblanc.png" title="logo facebook"></a>
             <a href="https://www.youtube.com/"><img src="assets/img/ytbblanc.png" title="logo youtube"></a>
-            <a href="https://www.instagram.com/"><img src="assets/img/logo-instagram-blanc.png" title="Logo instagram" ></a>
+            <a href="https://www.instagram.com/"><img src="assets/img/logo-instagram-blanc.png"
+                    title="Logo instagram"></a>
         </div>
         <div>
-            <p class="parafooter">Contact :<a href="tel:0612345678">06 12 34 56 78</a><br><a href="tel:0701234567">07 01 23 45 67</a><br><br> Fax: 0217 211 111</p>
+            <p class="parafooter">Contact :<a href="tel:0612345678">06 12 34 56 78</a><br><a href="tel:0701234567">07 01
+                    23 45 67</a><br><br> Fax: 0217 211 111</p>
             <p class="parafooter">©2022 ManuElecCorporation, Tous Droit reservés.</p>
-            <p class="parafooter" id="legallink"> <a href="#">Mentions Légales</a> | <a href="#">CGV</a> | <a href="#">Protection des données</a> | <a href="#">Conditions d'utilisation</a></p>
+            <p class="parafooter" id="legallink"> <a href="#">Mentions Légales</a> | <a href="#">CGV</a> | <a
+                    href="#">Protection des données</a> | <a href="#">Conditions d'utilisation</a></p>
         </div>
     </footer>
     <!--END FOOTER-->
