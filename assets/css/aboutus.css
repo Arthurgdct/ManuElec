@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*Start navmenu*/
+/*top part*/
+
+#menu_left {
+    justify-content: space-between;
+    list-style: none;
+    display: flex;
+    background-color: #1f1f1f;
+}
+
+#menu_left li a img {
+    width: 4rem;
+    height: 4rem;
+}
+
+#menu_right {
+    display: flex;
+}
+
+#caddie_link {
+    margin-right: 1rem;
+}
+
+#sreach img {
+    padding-top: 1rem;
+}
+
+#profil img {
+    padding-top: 1rem;
+}
+
+#caddie img {
+    padding-top: 1rem;
+}
+
+#sreach_link {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+#profil_link {
+    margin-right: 1rem;
+}
+
+#manueleclogo {
+    font-size: 4rem;
+    background-color: #8c0014;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 3rem;
+}
+
+/*bot part*/
+#menu_bot {
+    list-style: none;
+    font-size: 2rem;
+    background-color: #1f1f1f;
+    display: flex;
+    justify-content: center;
+}
+
+#menu_bot li {
+    padding: 1rem;
+}
+
+#menu_bot li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#menu_bot li a:hover {
+    background-color: #515151;
+}
+
+.active {
+    background-color: #515151;
+
+}
+
+/*End navmenu */
