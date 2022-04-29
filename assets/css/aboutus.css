@@ -194,6 +194,7 @@ iframe {
 /*FOOTER*/
 
 footer {
+    font-size: 1.5rem;
     background-color: #1f1f1f;
     text-align: center;
 }
