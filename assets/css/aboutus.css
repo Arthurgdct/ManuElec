@@ -1,9 +1,10 @@
 * {
+    color: #1f1f1f;
     margin: 0;
     padding: 0;
 }
 
-/*Start navmenu*/
+/*START MENU NAV*/
 /*top part*/
 
 #menu_left {
@@ -82,4 +83,141 @@
 
 }
 
-/*End navmenu */
+/*END MENU NAV*/
+
+/*section "L'entreprise"*/
+
+h2 {
+    text-decoration: underline;
+    text-align: center;
+    font-size: 6rem;
+    margin-bottom: 5rem;
+}
+
+h3 {
+    font-style: italic;
+    text-align: center;
+    font-size: 3.5rem;
+}
+
+.story img {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 60rem;
+    border-radius: 10%;
+}
+
+.story p {
+    margin-bottom: 8rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 45rem;
+    font-size: 2rem;
+}
+.story {
+    text-align: center;
+}
+
+/*End section */
+
+/*section "Nous contacter"*/
+
+#contact {
+    font-size: 2rem;
+    margin-bottom: 7rem;
+    margin-top: 7rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+fieldset div input {
+    box-shadow: 5px 5px 5px #1f1f1f;
+}
+
+fieldset div textarea {
+    margin-top: 1rem;
+    box-shadow: 5px 5px 5px #1f1f1f;
+}
+
+#form_part1 {
+    margin-right: 5%;
+    text-align: end;
+    width: 45%;
+}
+
+#form_part2 {
+    margin-right: 4%;
+    text-align: end;
+    width: 46%;
+}
+textarea {
+    resize: none;
+}
+
+fieldset {
+    border: none;
+}
+
+.question {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 45rem;
+    font-size: 2rem;
+}
+
+#buttonform {
+    font-size: 2rem;
+    width: 11rem;
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tel {
+    margin-bottom: 10rem;
+}
+
+/*End section "Nous contacter"*/
+
+/*Début de la section nous trouver*/
+
+iframe {
+    display: block;
+    margin: auto;
+    margin-bottom: 10rem;
+    border-radius: 10%;
+}
+
+/*Fin de la section nous trouver*/
+
+/*FOOTER*/
+
+footer {
+    background-color: #1f1f1f;
+    text-align: center;
+}
+
+footer img {
+    width: 3rem;
+    margin: 1rem;
+}
+
+.parafooter {
+    margin: 2rem;
+    color: #fff;
+}
+
+.parafooter a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#legallink {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+}
+
+/*END FOOTER*/
