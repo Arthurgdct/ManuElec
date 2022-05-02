@@ -49,17 +49,17 @@
   .Photo-Familly_facilities {
     z-index: 2;
     opacity: 1;
-    background: url('Familly_facilities.jpg');
+    background: url('../img/Familly_facilities.jpg');
     background-size: cover;
   }
   
   .Photo-Economic_use {
-    background: url('Economic_use.jpg');
+    background: url('../img/Economic_use.jpg');
     background-size: cover;
   }
   
   .Photo-Sav {
-    background: url('Sav.jpg');
+    background: url('../img/Sav.jpg');
     background-size: cover;
   }
   
@@ -164,7 +164,7 @@
     height: 100px;
     margin-top: 10px;
     border-radius: 50%;
-    background-image: url('./valeurs_1.jpg');
+    background-image: url('../img/valeurs_1.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -175,7 +175,7 @@
     height: 100px;
     margin-top: 10px;
     border-radius: 50%;
-    background-image: url('./zen.jpg');
+    background-image: url('../img/zen.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -186,7 +186,7 @@
     height: 100px;
     margin-top: 10px;
     border-radius: 50%;
-    background-image: url('./equipe.jpg');
+    background-image: url('../img/equipe.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
