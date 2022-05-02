@@ -224,6 +224,7 @@ iframe {
 /*FOOTER*/
 
 footer {
+  margin-top: 1rem;
   font-size: 1.5rem;
   background-color: #1f1f1f;
   text-align: center;
@@ -319,9 +320,8 @@ footer img {
   .parafooter {
     margin: 1rem;
   }
+  /*fin des modif pour le footer*/
 }
-
-/*fin des modif pour le footer*/
 
 /*Fin des modif pour les grands ecrans*/
 
@@ -411,7 +411,7 @@ footer img {
   color: azure;
 }
 
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:992px) {
   .Carousel-wrapper {
     width: 65%;
     height: 450px;
@@ -586,7 +586,7 @@ footer img {
 }
 
 #overlay {
-  height: 100vh;
+  height: 28rem;
   width: 100vw;
   position: absolute;
   top: 0;
