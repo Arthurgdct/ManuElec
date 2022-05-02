@@ -2,6 +2,12 @@
     color: #1f1f1f;
     margin: 0;
     padding: 0;
+    font-family: "amaranth";
+}
+
+body {
+    background: rgb(222, 222, 222);
+    background: linear-gradient(90deg, rgba(222, 222, 222, 1) 0%, rgba(255, 255, 255, 1) 100%);
 }
 
 /*START MENU NAV*/
@@ -87,7 +93,7 @@
 
 /*section "L'entreprise"*/
 
-.title_max{
+.title_max {
     text-decoration: underline;
     text-align: center;
     font-size: 6rem;
@@ -114,6 +120,7 @@
     width: 45rem;
     font-size: 2rem;
 }
+
 .story {
     text-align: center;
 }
@@ -165,6 +172,7 @@ fieldset div textarea {
 #object {
     width: 16rem;
 }
+
 textarea {
     resize: none;
 }
@@ -201,8 +209,14 @@ fieldset {
 iframe {
     display: block;
     margin: auto;
-    margin-bottom: 10rem;
+    margin-bottom: 2rem;
     border-radius: 10%;
+}
+
+#found_us p {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 /*Fin de la section nous trouver*/
@@ -247,28 +261,30 @@ footer img {
     }
 
     #story_team p {
-        padding-top: 4rem;
+        padding-top: 5rem;
         font-size: 1.6rem;
     }
 
     #story_team img {
-        margin-left: 2rem;
-        width: 30rem;
-        height: 30rem;
+        margin-left: auto;
+        min-width: 640px;
+        max-width: 640px;
+        height: 480px;
     }
 
     #story_made {
         display: flex;
         flex-direction: row-reverse;
     }
+
     #story_made p {
-        padding-top: 4rem;
+        padding-top: 5rem;
         font-size: 1.6rem;
     }
 
     #story_made img {
-        margin-right: 2rem;
-        width: 30rem;
+        margin-right: auto;
+        width: 40rem;
         height: 30rem;
     }
 
@@ -283,26 +299,28 @@ footer img {
         font-size: 2.5rem;
     }
 
-     .question {
-         font-size: 1.6rem;
-     }
+    .question {
+        font-size: 1.6rem;
+    }
 
-     iframe {
-         width: 50rem;
-     }
-        /*Footer pour grand ecran*/
-     footer {
-         font-size: 1rem;
-     }
+    iframe {
+        width: 50rem;
+    }
 
-     footer img {
-         width: 2rem;
-     }
+    /*Footer pour grand ecran*/
+    footer {
+        font-size: 1rem;
+    }
 
-     .parafooter {
-         margin: 1rem;
-     }
-     /*fin des modif pour le footer*/
+    footer img {
+        width: 2rem;
+    }
 
-     /*Fin des modif pour les grands ecrans*/
+    .parafooter {
+        margin: 1rem;
+    }
+
+    /*fin des modif pour le footer*/
+
+    /*Fin des modif pour les grands ecrans*/
 }
