@@ -1,290 +1,631 @@
- 
-  /* Début du Carousel Francois */
-  
-  .Carousel-wrapper {
-    height: 280px;
-    position: relative;
-    width: 100%;
-    display: block;
-    margin: 40px auto;
-    border: 2px solid black;
-  }
-  
-  .Carousel-Photo {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 25px 50px;
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
-  }
-  
-  .Arrow {
-    border: solid black;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 12px;
-  }
-  
-  .Arrow-prev {
-    left: 30px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%) rotate(135deg);
-  }
-  
-  .Arrow-next {
-    right: 30px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%) rotate(-45deg);
-  }
-  
-  [id^="Photo"] {
-    display: none;
-  }
-  
-  .Photo-Familly_facilities {
-    z-index: 2;
-    opacity: 1;
-    background: url('../img/Familly_facilities.jpg');
-    background-size: cover;
-  }
-  
-  .Photo-Economic_use {
-    background: url('../img/Economic_use.jpg');
-    background-size: cover;
-  }
-  
-  .Photo-Sav {
-    background: url('../img/Sav.jpg');
-    background-size: cover;
-  }
-  
-  *:target~.Photo-Familly_facilities {
-    opacity: 0;
-  }
-  
-  #Photo-Familly_facilities:target~.Photo-Familly_facilities {
-    opacity: 1;
-  }
-  
-  #Photo-Economic_use:target~.Photo-Economic_use,
-  #Photo-Sav:target~.Photo-Sav {
-    z-index: 3;
-    opacity: 1;
-  }
-  
-  .Commentaires_Photo {
-    margin-top: 275px;
-    margin-bottom: 1px;
-    color: azure;
-  }
-  
-  @media only screen and (min-width:768px) {
-    .Carousel-wrapper {
-      width: 65%;
-      height: 450px;
-    }
-  
-    .Commentaires_Photo {
-      color: black;
-    }
-  }
-  
-  /* Fin du Carousel */
-  /* Début de l'article accordéon avec les valeurs Francois */
-  
-  .accordion {
-    max-width: 400px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    overflow: hidden;
-    font-family: "Quicksand", sans-serif;
-    background: #009578;
-  }
-  
-  .accordion__label,
-  .accordion__content {
-    padding: 14px 20px;
-  }
-  
-  .accordion__label {
-    display: block;
-    color: #ffffff;
-    font-weight: 500;
-    cursor: pointer;
-    position: relative;
-    transition: background 0.1s;
-  }
-  
-  .accordion__label:hover {
-    background: rgba(0, 0, 0, 0.1);
-  }
-  
-  .accordion__label::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    width: 12px;
-    height: 6px;
-    background-size: contain;
-    transition: transform 0.4s;
-  }
-  
-  .accordion__content {
-    background: #ffffff;
-    line-height: 1.6;
-    font-size: 0.85em;
-    display: none;
-  }
-  
-  .accordion__input {
-    display: none;
-  }
-  
-  .accordion__input:checked ~ .accordion__content {
-    display: block;
-  }
-  
-  .accordion__input:checked ~ .accordion__label::after {
-    transform: translateY(-50%) rotate(0.5turn);
-  }
-  
-  
-  /* Fin de la article accordeon */
-  /* Début section Tooltip Francois */
-  
-  .tooltip_valeurs_1 {
-    width: 100px;
-    height: 100px;
-    margin-top: 10px;
-    border-radius: 50%;
-    background-image: url('../img/valeurs_1.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-  }
-  
-  .tooltip_valeurs_2 {
-    width: 100px;
-    height: 100px;
-    margin-top: 10px;
-    border-radius: 50%;
-    background-image: url('../img/zen.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-  }
-  
-  .tooltip_valeurs_3 {
-    width: 100px;
-    height: 100px;
-    margin-top: 10px;
-    border-radius: 50%;
-    background-image: url('../img/equipe.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-  }
-  
-  .tooltip_valeurs_x::before,
-  .tooltip_valeurs_x::after {
-    --scale: 0;
-  
-    position: absolute;
-    top: -.25px;
-    left: 100%;
-    transform: translateX(20%) translateY(10%) scale(var(--scale));
-  }
-  
-  .tooltip_valeurs_x::before {
-    content: attr(data-tooltip);
-    color: black;
-    padding: .5rem;
-    border-radius: .5rem;
-    text-align: center;
-    width: max-content;
-    max-width: 100%;
-    background: pink;
-  }
-  
-  .tooltip_valeurs_x:hover::before {
-    --scale: 1;
-  }
-  
-  /* Fin de la section Tooltip */
-  /* Debut de la section Valeurs Francois*/
-  
-  #Valeurs {
-    margin-top: 5rem;
-    height: 400px;
-  }
-  
-  #Menu_des_valeurs {
-    flex-direction: column;
-    text-align: center;
-    margin-bottom: 25px;
-  }
-  
-  #Tooltips_valeurs {
+* {
+  color: #1f1f1f;
+  margin: 0;
+  padding: 0;
+  font-family: "amaranth";
+}
+
+body {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(235, 235, 235, 1) 50%, rgba(255, 255, 255, 1) 100%);
+}
+
+/*START MENU NAV*/
+/*top part*/
+
+#menu_left {
+  justify-content: space-between;
+  list-style: none;
+  display: flex;
+  background-color: #1f1f1f;
+}
+
+#menu_left li a img {
+  width: 4rem;
+  height: 4rem;
+}
+
+#menu_right {
+  display: flex;
+}
+
+#caddie_link {
+  margin-right: 1rem;
+}
+
+#sreach img {
+  padding-top: 1rem;
+}
+
+#profil img {
+  padding-top: 1rem;
+}
+
+#caddie img {
+  padding-top: 1rem;
+}
+
+#sreach_link {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+#profil_link {
+  margin-right: 1rem;
+}
+
+#manueleclogo {
+  font-size: 4rem;
+  background-color: #8c0014;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: 3rem;
+}
+
+/*bot part*/
+#menu_bot {
+  list-style: none;
+  font-size: 2rem;
+  background-color: #1f1f1f;
+  display: flex;
+  justify-content: center;
+}
+
+#menu_bot li {
+  padding: 1rem;
+}
+
+#menu_bot li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#menu_bot li a:hover {
+  background-color: #515151;
+}
+
+.active {
+  background-color: #515151;
+
+}
+
+/*END MENU NAV*/
+
+/*section "L'entreprise"*/
+
+.title_max {
+  text-decoration: underline;
+  text-align: center;
+  font-size: 6rem;
+  margin-bottom: 5rem;
+}
+
+.title_min {
+  font-style: italic;
+  text-align: center;
+  font-size: 3.5rem;
+}
+
+.story img {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  width: 60rem;
+  border-radius: 10%;
+}
+
+.story p {
+  margin-bottom: 8rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 45rem;
+  font-size: 2rem;
+}
+
+.story {
+  text-align: center;
+}
+
+/*End section */
+
+/*section "Nous contacter"*/
+
+#contact {
+  font-size: 2rem;
+  margin-bottom: 7rem;
+  margin-top: 7rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+fieldset div input {
+  box-shadow: 5px 5px 5px #1f1f1f;
+}
+
+fieldset div textarea {
+  margin-top: 1rem;
+  box-shadow: 5px 5px 5px #1f1f1f;
+}
+
+#form_part1 {
+  margin-right: 5%;
+  text-align: end;
+  width: 45%;
+}
+
+#form_part1 input {
+  width: 13rem;
+  font-size: 1.5rem;
+}
+
+.margform {
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+
+#form_part2 {
+  border-left: #1f1f1f solid 3px;
+  margin-right: 4%;
+  text-align: end;
+  width: 30%;
+}
+
+#object {
+  width: 14.7rem;
+}
+
+textarea {
+  resize: none;
+}
+
+fieldset {
+  border: none;
+}
+
+.question {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 45rem;
+  font-size: 2rem;
+}
+
+#buttonform {
+  font-size: 2rem;
+  width: 20rem;
+  padding: 1rem;
+  margin-top: 6rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#tel {
+  margin-bottom: 10rem;
+}
+
+/*End section "Nous contacter"*/
+
+/*Début de la section nous trouver*/
+
+iframe {
+  display: block;
+  margin: auto;
+  margin-bottom: 2rem;
+  border-radius: 10%;
+}
+
+#found_us p {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/*Fin de la section nous trouver*/
+
+/*FOOTER*/
+
+footer {
+  font-size: 1.5rem;
+  background-color: #1f1f1f;
+  text-align: center;
+}
+
+footer img {
+  width: 3rem;
+  margin: 1rem;
+}
+
+.parafooter {
+  margin: 2rem;
+  color: #fff;
+}
+
+.parafooter a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#legallink {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+  padding-bottom: 1rem;
+}
+
+/*END FOOTER*/
+
+/*Modification pour les grand ecran*/
+
+@media screen and (min-width: 992px) {
+  #story_team {
     display: flex;
-    flex-direction: column;
-    margin-top: 5rem;
-    height: 300px;
-    padding-left: 100Px;
   }
-  
-  /* Fin de la section Valeurs */
-  /* Début de la section vidéo Francois */
-  
-  
-  
-  #video_challenge {
-    height: 100vh;
-    width: 100vw;
-    margin-top: 20rem;
-    background: pink;
-    position:relative;
-    z-index:1;
+
+  #story_team p {
+    padding-top: 5rem;
+    font-size: 1.6rem;
   }
-  
-  #video_nature {
-    width: -webkit-fill-available;
+
+  #story_team img {
+    margin-left: auto;
+    min-width: 640px;
+    max-width: 640px;
+    height: 480px;
   }
-  
-  #overlay{
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    top:0;
-    left:0;
+
+  #story_made {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  #story_made p {
+    padding-top: 5rem;
+    font-size: 1.6rem;
+  }
+
+  #story_made img {
+    margin-right: auto;
+    width: 40rem;
+    height: 30rem;
+  }
+
+  .title_max {
+    font-size: 4rem;
+    text-decoration: underline;
     text-align: center;
-    margin-top: 400px;
-    z-index:2;
-    color: white;
+    margin-bottom: 5rem;
   }
-  
-  #overlay h1 {
-    font-size: 60px;
-    font-weight: 900;
+
+  .title_min {
+    font-size: 2.5rem;
   }
-  
-  #overlay p {
-    font-size: 20px;
-    padding-bottom: 30px;
+
+  .question {
+    font-size: 1.6rem;
   }
-  
-  #overlay #btn {
-  
-    background: white;
-    padding: 15px 25px 15px 25px;
-    text-decoration: none;
+
+  iframe {
+    width: 50rem;
+  }
+
+  /*Footer pour grand ecran*/
+  footer {
+    font-size: 1rem;
+  }
+
+  footer img {
+    width: 2rem;
+  }
+
+  .parafooter {
+    margin: 1rem;
+  }
+}
+
+/*fin des modif pour le footer*/
+
+/*Fin des modif pour les grands ecrans*/
+
+
+
+/* Début du Carousel Francois */
+
+.Carousel-wrapper {
+  height: 280px;
+  position: relative;
+  width: 100%;
+  display: block;
+  margin: 40px auto;
+  border: 2px solid black;
+}
+
+.Carousel-Photo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px 50px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.Arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 12px;
+}
+
+.Arrow-prev {
+  left: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(135deg);
+}
+
+.Arrow-next {
+  right: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+[id^="Photo"] {
+  display: none;
+}
+
+.Photo-Familly_facilities {
+  z-index: 2;
+  opacity: 1;
+  background: url('../img/Familly_facilities.jpg');
+  background-size: cover;
+}
+
+.Photo-Economic_use {
+  background: url('../img/Economic_use.jpg');
+  background-size: cover;
+}
+
+.Photo-Sav {
+  background: url('../img/Sav.jpg');
+  background-size: cover;
+}
+
+*:target~.Photo-Familly_facilities {
+  opacity: 0;
+}
+
+#Photo-Familly_facilities:target~.Photo-Familly_facilities {
+  opacity: 1;
+}
+
+#Photo-Economic_use:target~.Photo-Economic_use,
+#Photo-Sav:target~.Photo-Sav {
+  z-index: 3;
+  opacity: 1;
+}
+
+.Commentaires_Photo {
+  margin-top: 275px;
+  margin-bottom: 1px;
+  color: azure;
+}
+
+@media only screen and (min-width:768px) {
+  .Carousel-wrapper {
+    width: 65%;
+    height: 450px;
+  }
+
+  .Commentaires_Photo {
     color: black;
   }
-  
-  /* Fin de la section vidéo */
+}
+
+/* Fin du Carousel */
+/* Début de l'article accordéon avec les valeurs Francois */
+
+.accordion {
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  font-family: "Quicksand", sans-serif;
+  background: #009578;
+}
+
+.accordion__label,
+.accordion__content {
+  padding: 14px 20px;
+}
+
+.accordion__label {
+  display: block;
+  color: #ffffff;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.1s;
+}
+
+.accordion__label:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.accordion__label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  width: 12px;
+  height: 6px;
+  background-size: contain;
+  transition: transform 0.4s;
+}
+
+.accordion__content {
+  background: #ffffff;
+  line-height: 1.6;
+  font-size: 0.85em;
+  display: none;
+}
+
+.accordion__input {
+  display: none;
+}
+
+.accordion__input:checked~.accordion__content {
+  display: block;
+}
+
+.accordion__input:checked~.accordion__label::after {
+  transform: translateY(-50%) rotate(0.5turn);
+}
+
+
+/* Fin de la article accordeon */
+/* Début section Tooltip Francois */
+
+.tooltip_valeurs_1 {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  border-radius: 50%;
+  background-image: url('../img/valeurs_1.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.tooltip_valeurs_2 {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  border-radius: 50%;
+  background-image: url('../img/zen.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.tooltip_valeurs_3 {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  border-radius: 50%;
+  background-image: url('../img/equipe.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.tooltip_valeurs_x::before,
+.tooltip_valeurs_x::after {
+  --scale: 0;
+
+  position: absolute;
+  top: -.25px;
+  left: 100%;
+  transform: translateX(20%) translateY(10%) scale(var(--scale));
+}
+
+.tooltip_valeurs_x::before {
+  content: attr(data-tooltip);
+  color: black;
+  padding: .5rem;
+  border-radius: .5rem;
+  text-align: center;
+  width: max-content;
+  max-width: 100%;
+  background: pink;
+}
+
+.tooltip_valeurs_x:hover::before {
+  --scale: 1;
+}
+
+/* Fin de la section Tooltip */
+/* Debut de la section Valeurs Francois*/
+
+#Valeurs {
+  margin-top: 5rem;
+  height: 400px;
+}
+
+#Menu_des_valeurs {
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+#Tooltips_valeurs {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  height: 300px;
+  padding-left: 100Px;
+}
+
+/* Fin de la section Valeurs */
+/* Début de la section vidéo Francois */
+
+
+
+#video_challenge {
+  height: 100vh;
+  width: 100vw;
+  margin-top: 20rem;
+  background: pink;
+  position: relative;
+  z-index: 1;
+}
+
+#video_nature {
+  width: -webkit-fill-available;
+}
+
+#overlay {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  margin-top: 400px;
+  z-index: 2;
+  color: white;
+}
+
+#overlay h1 {
+  font-size: 60px;
+  font-weight: 900;
+}
+
+#overlay p {
+  font-size: 20px;
+  padding-bottom: 30px;
+}
+
+#overlay #btn {
+
+  background: white;
+  padding: 15px 25px 15px 25px;
+  text-decoration: none;
+  color: black;
+}
+
+/* Fin de la section vidéo */
+
+/*Bootstrap compatibility*/
+
+ul {
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+*,::after, ::before {
+  box-sizing: content-box;
+}
+
+/*End Bootstrap compatibility*/
