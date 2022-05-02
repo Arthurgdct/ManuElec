@@ -6,8 +6,8 @@
 }
 
 body {
-    background: rgb(222, 222, 222);
-    background: linear-gradient(90deg, rgba(222, 222, 222, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(235, 235, 235, 1) 50%, rgba(255, 255, 255, 1) 100%);
 }
 
 /*START MENU NAV*/
@@ -170,7 +170,7 @@ fieldset div textarea {
 }
 
 #object {
-    width: 16rem;
+    width: 14.7rem;
 }
 
 textarea {
