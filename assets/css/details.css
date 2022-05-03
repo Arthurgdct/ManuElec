@@ -85,6 +85,8 @@
 
     /*End navmenu */
 
+    /*debut commande carrousel*/
+
     img {
         max-width: 100%;
     }
@@ -134,34 +136,41 @@
         z-index: 10;
         transition: left 0s 0.75s;
     }
+    /*fin commande carrousel*/
+
     /*commande pour zoom sur image*/
-    .lave-linge{
+    .lave-linge {
         transition: transform .1s;
     }
 
-    .lave-linge :hover{
+    .lave-linge :hover {
         -ms-transform: scale (1.5);
         -webkit-transform: scale (1.5);
         transform: scale (1.5);
     }
+
     /*fin commande zoom sur image*/
     [id^="slide"]:checked+.slide-img {
         left: 0;
         z-index: 100;
         transition: left 0.65s ease-out;
     }
-    #nom-du-produit{
-       font-size: 70px;
+
+    #nom-du-produit {
+        font-size: 70px;
     }
-    #presentation{
-        font-size: 25px;
+
+    #presentation {
+        font-size: 50px;
         padding-top: 50px;
     }
-    #prix{
+
+    #prix {
         font-size: 70px;
         padding-top: 50px;
     }
-    #bouton-achat{
+
+    #bouton-achat {
         text-align: center;
         width: 300px;
         height: 120px;
@@ -171,58 +180,135 @@
         color: #1f1f1f;
         font-size: 30px;
     }
+
     /*début commande bouton cascade*/
     details {
-        display:block; 
-        width:300px;
-        margin:10px 0;
+        display: block;
+        width: 300px;
+        margin: 10px 0;
     }
+
     summary {
-        display:block; 
-        background:#f7f7f7;
-        color:black;
-        border-radius:5px;
-        padding:5px;
-        cursor:pointer;font-weight:bold;
+        display: block;
+        background: #f7f7f7;
+        color: black;
+        border-radius: 5px;
+        padding: 5px;
+        cursor: pointer;
+        font-weight: bold;
     }
-    
+
     summary::-webkit-details-marker {
-       color:#FF0000; 
-       background:#FFFFFF; 
+        color: #FF0000;
+        background: #FFFFFF;
     }
-    
+
     details[open] summary::-webkit-details-marker {
-       color:#0000FF; 
-       background:#00FFFF;
+        color: #0000FF;
+        background: #00FFFF;
     }
+
     summary::-webkit-details-marker {
-       display: none
+        display: none
     }
-    
+
     summary:after {
-       content: "+";
-       color: #FFFFFF;
-       float: left;
-       font-size: 1.5em;
-       font-weight: bold;
-       margin: -5px 5px 0 0;
-       padding: 0;
-       text-align: center;
-       width: 20px;
+        content: "+";
+        color: #FFFFFF;
+        float: left;
+        font-size: 1.5em;
+        font-weight: bold;
+        margin: -5px 5px 0 0;
+        padding: 0;
+        text-align: center;
+        width: 20px;
     }
-    
+
     details[open] summary:after {
-       content: "-";
-      color: #FFFFFF
+        content: "-";
+        color: #FFFFFF
     }
+
     /*fin commande bouton cascade*/
 
-    #capsule_dans_machine{
+    #capsule_dans_machine {
         text-align: center;
-       
+        padding-top: 25px;
+
     }
 
-    #dosage{
-       color: #F5990F; 
+    #dosage {
+        color: #F5990F;
     }
+
+    #titre-detail {
+        padding-top: 50px;
+        font-size: 50px;
+    }
+
+    #detail-produit {
+        font-size: 35px;
+    }
+
+    #vos-avantage {
+        text-align: center;
+        font-size: 35px;
+        padding-top: 25px;
+    }
+
+    #cardosing {
+        font-size: 35px;
+    }
+
+    #titre-dosage {
+        font-size: 35px;
+    }
+
+    #paragraphe-dosage {
+        font-size: 35px;
+    }
+
+    #liste-point {
+        margin-left: 50px;
+    }
+
+    #soin-du-linge {
+        font-size: 35px;
+    }
+
+    #tambour {
+        color: #F5990F;
+        font-size: 35px
+    }
+
+    #titre-tambour {
+        font-size: 35px;
+    }
+
+    #p-tambour {
+        font-size: 35px;
+    }
+}
+
+@media screen and (min-width :1024px) {
+    * {
+        margin: 0;
+        padding: 0;
      }
+     #capsule_dans_machine {
+        text-align: left;
+        padding-top: 25px;
+
+    }
+    #vos-avantage {
+        text-align: left;
+        font-size: 35px;
+        padding-top: 25px;
+    }
+
+
+
+
+
+
+    }
