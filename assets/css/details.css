@@ -1,0 +1,228 @@
+@media screen and (min-width :320px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    /*Start navmenu*/
+    /*top part*/
+
+    #menu_left {
+        justify-content: space-between;
+        list-style: none;
+        display: flex;
+        background-color: #1f1f1f;
+    }
+
+    #menu_left li a img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    #menu_right {
+        display: flex;
+    }
+
+    #caddie_link {
+        margin-right: 1rem;
+    }
+
+    #sreach img {
+        padding-top: 1rem;
+    }
+
+    #profil img {
+        padding-top: 1rem;
+    }
+
+    #caddie img {
+        padding-top: 1rem;
+    }
+
+    #sreach_link {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    #profil_link {
+        margin-right: 1rem;
+    }
+
+    #manueleclogo {
+        font-size: 4rem;
+        background-color: #8c0014;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-left: 3rem;
+    }
+
+    /*bot part*/
+    #menu_bot {
+        list-style: none;
+        font-size: 2rem;
+        background-color: #1f1f1f;
+        display: flex;
+        justify-content: center;
+    }
+
+    #menu_bot li {
+        padding: 1rem;
+    }
+
+    #menu_bot li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    #menu_bot li a:hover {
+        background-color: #515151;
+    }
+
+    .active {
+        background-color: #515151;
+
+    }
+
+    /*End navmenu */
+
+    img {
+        max-width: 100%;
+    }
+
+    .slider-container {
+        max-width: 800px;
+        position: relative;
+        margin: auto;
+        height: 350px;
+        overflow: hidden;
+    }
+
+    .menu {
+        position: absolute;
+        left: 0;
+        z-index: 11;
+        width: 100%;
+        bottom: 0;
+        text-align: center;
+    }
+
+    .menu label {
+        cursor: pointer;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: #ccc;
+        border-radius: 50px;
+        margin: 0 0.2em 1em;
+    }
+
+    .menu label:hover,
+    .menu label:focus {
+        background: #1c87c9;
+    }
+
+    .slide-input {
+        opacity: 0;
+    }
+
+    .slide-img {
+        width: 100%;
+        height: 250px;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        z-index: 10;
+        transition: left 0s 0.75s;
+    }
+    /*commande pour zoom sur image*/
+    .lave-linge{
+        transition: transform .1s;
+    }
+
+    .lave-linge :hover{
+        -ms-transform: scale (1.5);
+        -webkit-transform: scale (1.5);
+        transform: scale (1.5);
+    }
+    /*fin commande zoom sur image*/
+    [id^="slide"]:checked+.slide-img {
+        left: 0;
+        z-index: 100;
+        transition: left 0.65s ease-out;
+    }
+    #nom-du-produit{
+       font-size: 70px;
+    }
+    #presentation{
+        font-size: 25px;
+        padding-top: 50px;
+    }
+    #prix{
+        font-size: 70px;
+        padding-top: 50px;
+    }
+    #bouton-achat{
+        text-align: center;
+        width: 300px;
+        height: 120px;
+        display: block;
+        margin: auto;
+        background-color: #F5990F;
+        color: #1f1f1f;
+        font-size: 30px;
+    }
+    /*début commande bouton cascade*/
+    details {
+        display:block; 
+        width:300px;
+        margin:10px 0;
+    }
+    summary {
+        display:block; 
+        background:#f7f7f7;
+        color:black;
+        border-radius:5px;
+        padding:5px;
+        cursor:pointer;font-weight:bold;
+    }
+    
+    summary::-webkit-details-marker {
+       color:#FF0000; 
+       background:#FFFFFF; 
+    }
+    
+    details[open] summary::-webkit-details-marker {
+       color:#0000FF; 
+       background:#00FFFF;
+    }
+    summary::-webkit-details-marker {
+       display: none
+    }
+    
+    summary:after {
+       content: "+";
+       color: #FFFFFF;
+       float: left;
+       font-size: 1.5em;
+       font-weight: bold;
+       margin: -5px 5px 0 0;
+       padding: 0;
+       text-align: center;
+       width: 20px;
+    }
+    
+    details[open] summary:after {
+       content: "-";
+      color: #FFFFFF
+    }
+    /*fin commande bouton cascade*/
+
+    #capsule_dans_machine{
+        text-align: center;
+       
+    }
+
+    #dosage{
+       color: #F5990F; 
+    }
+     }
