@@ -337,6 +337,7 @@ footer img {
   margin-bottom: 1px;
   color: azure;
 }
+
 /* Fin du Carousel */
 /* Début de l'article accordéon avec les valeurs Francois */
 
@@ -554,7 +555,298 @@ ul {
 
 /*End Bootstrap compatibility*/
 
-/*Modification pour les grand ecran*/
+
+/*Shop part*/
+
+#text {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#party1 #need_help {
+  display: block;
+  border: 1px black;
+}
+
+.green img {
+  color: green;
+}
+
+#shopmobile {
+  display: flex;
+  align-content: space-around;
+}
+
+#rigth {
+  padding-left: 80px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#aside1,
+#aside2,
+#aside3,
+#aside4 {
+  width: 25%;
+  padding-top: 10px;
+  justify-content: space-between;
+  overflow: auto;
+
+}
+
+#party2 p {
+  line-height: 95px;
+  border-bottom: 1px black;
+}
+
+#aside2,
+#aside3,
+#aside4 {
+  margin-top: 150px;
+  flex-direction: column;
+  align-content: space-between;
+  text-align: center;
+}
+
+#aside2_1,
+#aside2_2,
+#aside3_1,
+#aside3_2,
+#aside4_1,
+#aside4_2 {
+  background-color: rgb(250, 250, 253);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border: white;
+}
+
+/*End shop part*/
+
+/*détails part*/
+/*debut commande carrousel*/
+
+img {
+  max-width: 100%;
+}
+
+.slider-container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+  height: 35rem;
+  overflow: hidden;
+}
+
+.menu {
+  position: absolute;
+  left: 0;
+  z-index: 11;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+}
+
+.menu label {
+  cursor: pointer;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50px;
+  margin: 0 0.2em 1em;
+}
+
+.menu label:hover,
+.menu label:focus {
+  background: #1c87c9;
+}
+
+.slide-input {
+  opacity: 0;
+}
+
+.slide-img {
+  width: 100%;
+  height: 27rem;
+  position: absolute;
+  top: 5rem;
+  left: 100%;
+  z-index: 10;
+  transition: left 0s 0.75s;
+}
+
+/*fin commande carrousel*/
+
+/*commande pour zoom sur image*/
+
+/*fin commande zoom sur image*/
+[id^="slide"]:checked+.slide-img {
+  left: 0;
+  z-index: 100;
+  transition: left 0.65s ease-out;
+}
+
+#nom-du-produit {
+  font-size: 70px;
+}
+
+#presentation {
+  font-size: 50px;
+  padding-top: 50px;
+}
+
+#prix {
+  font-size: 70px;
+  padding-top: 50px;
+}
+
+#bouton-achat {
+  text-align: center;
+  width: 300px;
+  height: 120px;
+  display: block;
+  margin: auto;
+  background-color: #F5990F;
+  color: #1f1f1f;
+  font-size: 30px;
+}
+
+/*début commande bouton cascade*/
+details {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+}
+
+summary {
+  display: block;
+  background: #f7f7f7;
+  color: black;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+summary::-webkit-details-marker {
+  color: #FF0000;
+  background: #FFFFFF;
+}
+
+details[open] summary::-webkit-details-marker {
+  color: #0000FF;
+  background: #00FFFF;
+}
+
+summary::-webkit-details-marker {
+  display: none
+}
+
+summary:after {
+  content: "+";
+  color: #FFFFFF;
+  float: left;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: -5px 5px 0 0;
+  padding: 0;
+  text-align: center;
+  width: 20px;
+}
+
+details[open] summary:after {
+  content: "-";
+  color: #FFFFFF
+}
+
+/*fin commande bouton cascade*/
+
+#capsule_dans_machine {
+  text-align: center;
+  padding-top: 25px;
+
+}
+
+#dosage p {
+  color: #F5990F;
+}
+
+#titre-detail {
+  padding-top: 50px;
+  font-size: 50px;
+}
+
+#detail-produit {
+  font-size: 35px;
+}
+
+#vos-avantage {
+  text-align: center;
+  font-size: 35px;
+  padding-top: 25px;
+}
+
+#cardosing {
+  font-size: 35px;
+}
+
+#titre-dosage {
+  font-size: 35px;
+}
+
+#paragraphe-dosage {
+  font-size: 35px;
+}
+
+#liste-point {
+  margin-left: 50px;
+}
+
+#soin-du-linge {
+  font-size: 35px;
+}
+
+#tambour {
+  color: #F5990F;
+  font-size: 35px
+}
+
+#titre-tambour {
+  font-size: 35px;
+}
+
+#p-tambour {
+  font-size: 35px;
+}
+
+#liste-point li {
+  font-size: 35px;
+}
+
+/*End détails part*/
+
+@media screen and (max-width: 992px) {
+  #aside1 {
+    display: none;
+  }
+
+  #shopmobile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #aside2,
+  #aside3,
+  #aside4 {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+}
 
 @media screen and (min-width: 992px) {
   #story_team {
@@ -639,10 +931,62 @@ ul {
     margin-bottom: 30rem;
   }
 
-  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  #capsule_dans_machine {
+    text-align: left;
+    padding-top: 25px;
+
+  }
+
+  #vos-avantage {
+    text-align: left;
+    font-size: 35px;
+    padding-top: 25px;
+  }
+
+  #nom-du-produit {
+    font-size: 3rem;
+  }
+
+  #presentation {
+    font-size: 2rem;
+  }
+
+  #titre-detail {
+    font-size: 2rem;
+  }
+
+  #liste-point li {
+    font-size: 1rem;
+  }
+  #cardosing {
+    font-size: 1.5rem;
+  }
+
+  #titre-dosage {
+    font-size: 2rem;
+  }
+
+  #paragraphe-dosage {
+    font-size: 1.5rem;
+  }
+
+  #p-tambour {
+    font-size: 1.5rem;
+  }
+
+  #titre-tambour {
+    font-size: 1.5rem;
+  }
+
+  #tambour {
+    font-size: 1.5rem;
+  }
 }
 
 /*fin des modif pour le footer*/
-
-
 /*Fin des modif pour les grands ecrans*/
