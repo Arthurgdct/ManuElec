@@ -254,79 +254,6 @@ footer img {
 
 /*END FOOTER*/
 
-/*Modification pour les grand ecran*/
-
-@media screen and (min-width: 992px) {
-  #story_team {
-    display: flex;
-  }
-
-  #story_team p {
-    padding-top: 5rem;
-    font-size: 1.6rem;
-  }
-
-  #story_team img {
-    margin-left: auto;
-    min-width: 640px;
-    max-width: 640px;
-    height: 480px;
-  }
-
-  #story_made {
-    display: flex;
-    flex-direction: row-reverse;
-  }
-
-  #story_made p {
-    padding-top: 5rem;
-    font-size: 1.6rem;
-  }
-
-  #story_made img {
-    margin-right: auto;
-    width: 40rem;
-    height: 30rem;
-  }
-
-  .title_max {
-    font-size: 4rem;
-    text-decoration: underline;
-    text-align: center;
-    margin-bottom: 5rem;
-  }
-
-  .title_min {
-    font-size: 2.5rem;
-  }
-
-  .question {
-    font-size: 1.6rem;
-  }
-
-  iframe {
-    width: 50rem;
-  }
-
-  /*Footer pour grand ecran*/
-  footer {
-    font-size: 1rem;
-  }
-
-  footer img {
-    width: 2rem;
-  }
-
-  .parafooter {
-    margin: 1rem;
-  }
-  /*fin des modif pour le footer*/
-}
-
-/*Fin des modif pour les grands ecrans*/
-
-
-
 /* Début du Carousel Francois */
 
 .Carousel-wrapper {
@@ -410,23 +337,12 @@ footer img {
   margin-bottom: 1px;
   color: azure;
 }
-
-@media only screen and (min-width:992px) {
-  .Carousel-wrapper {
-    width: 65%;
-    height: 450px;
-  }
-
-  .Commentaires_Photo {
-    color: black;
-  }
-}
-
 /* Fin du Carousel */
 /* Début de l'article accordéon avec les valeurs Francois */
 
 .accordion {
-  max-width: 400px;
+  width: inherit;
+  text-align: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   overflow: hidden;
@@ -573,20 +489,26 @@ footer img {
 
 
 #video_challenge {
-  height: 100vh;
+  height: 26vh;
   width: 100vw;
-  margin-top: 20rem;
+  margin-top: 10rem;
   background: pink;
   position: relative;
   z-index: 1;
+  margin-bottom: 10rem;
 }
 
 #video_nature {
+  width: 100%;
+  width: -moz-available;
+  /* WebKit-based browsers will ignore this. */
   width: -webkit-fill-available;
+  /* Mozilla-based browsers will ignore this. */
+  width: fill-available;
 }
 
 #overlay {
-  height: 28rem;
+  height: 13rem;
   width: 100vw;
   position: absolute;
   top: 0;
@@ -624,8 +546,103 @@ ul {
   padding-left: 0;
 }
 
-*,::after, ::before {
+*,
+::after,
+::before {
   box-sizing: content-box;
 }
 
 /*End Bootstrap compatibility*/
+
+/*Modification pour les grand ecran*/
+
+@media screen and (min-width: 992px) {
+  #story_team {
+    display: flex;
+  }
+
+  #story_team p {
+    padding-top: 5rem;
+    font-size: 1.6rem;
+  }
+
+  #story_team img {
+    margin-left: auto;
+    min-width: 640px;
+    max-width: 640px;
+    height: 480px;
+  }
+
+  #story_made {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  #story_made p {
+    padding-top: 5rem;
+    font-size: 1.6rem;
+  }
+
+  #story_made img {
+    margin-right: auto;
+    width: 40rem;
+    height: 30rem;
+  }
+
+  .title_max {
+    font-size: 4rem;
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+
+  .title_min {
+    font-size: 2.5rem;
+  }
+
+  .question {
+    font-size: 1.6rem;
+  }
+
+  iframe {
+    width: 50rem;
+  }
+
+  /*Footer pour grand ecran*/
+  footer {
+    font-size: 1rem;
+  }
+
+  footer img {
+    width: 2rem;
+  }
+
+  .parafooter {
+    margin: 1rem;
+  }
+
+  .Carousel-wrapper {
+    width: 65%;
+    height: 450px;
+  }
+
+  .Commentaires_Photo {
+    color: black;
+  }
+
+  #video_nature {
+    max-width: 83rem;
+  }
+
+  #video_challenge {
+    text-align: center;
+    margin-bottom: 30rem;
+  }
+
+  
+}
+
+/*fin des modif pour le footer*/
+
+
+/*Fin des modif pour les grands ecrans*/
